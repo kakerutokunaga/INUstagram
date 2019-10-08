@@ -13,5 +13,40 @@
  */
 
  
- @import "bootstrap";
+@import "bootstrap";
+@import "font-awesome";
 
+// .fa-stack {
+//   border-right: 1px solid;
+//   margin-right: 1rem;
+
+
+ 
+// }
+.logo-name {
+  border-left: 1px solid;
+  margin-left: 1rem;
+  padding-left: 1rem;
+}
+
+.container{
+  max-width: 1000px;
+}
+.navbar{
+  border-bottom: 1px solid rgba(0,0,0,.0975);
+}
+.user-section{
+  a{
+    padding-left: 15px;
+  }
+  i.far{
+    font-size: 22px;
+    color: #000000d4;
+  }
+}
+.search-form{
+  input{
+    font-size: 13px;
+    text-align: center;
+  }
+}

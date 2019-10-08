@@ -1,21 +1,47 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Inustagram</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+<head>
+  <title>Inustagram</title>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+  <script src="https://kit.fontawesome.com/12cd32fff0.js" crossorigin="anonymous"></script>
 
-  <body>
-  
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+</head>
+
+<body>
+
   <%# Header %>
+  <nav class="navbar navbar-light bg-light">
+    <div class="container d-flex">
+      <div class="logo">
+        <a href="#" class="navbar-brand">
+          <%= fa_stacked_icon "paw", base:"square-o" %>
+          <span class="logo-name">INUstagram</span>
+        </a>
+      </div>
+      <div class="m-auto">
+        <form class="form-inline md-form form-sm mt-0 search-form">
+          <%=fa_icon "search"%>
+          <input class="form-control form-control-sm ml-3 w-75" type="text" placeholder="@Search" aria-label="Search">
+        </form>
+
+      </div>
+      <div class="user-section" > 
+        <a href=""><i class="far fa-compass"></i></a>
+        <a href=""><i class="far fa-heart"></i></a>
+        <a href=""><i class="far fa-user"></i></a>
+      </div>
+
+    </div>
+  </nav>
 
   <%# Main-contet %>
-    <%= yield %>
+  <%= yield %>
 
   <%# Footer %>
-  </body>
+</body>
+
 </html>
