@@ -22,26 +22,42 @@
           <span class="logo-name">INUstagram</span>
         </a>
       </div>
-      <div class="m-auto">
+
+      <div class="d-none d-sm-inline m-auto">
         <form class="form-inline md-form form-sm mt-0 search-form">
           <%=fa_icon "search"%>
           <input class="form-control form-control-sm ml-3 w-75" type="text" placeholder="@Search" aria-label="Search">
         </form>
 
       </div>
-      <div class="user-section" > 
+      <div class="user-section">
         <a href=""><i class="far fa-compass"></i></a>
         <a href=""><i class="far fa-heart"></i></a>
-        <a href=""><i class="far fa-user"></i></a>
+        <% if user_signed_in? %>
+          <a href="<%= user_path(current_user) %>"><i class="far fa-user"></i></a>
+        <% else %>
+          <a href="<%= new_user_session_path %>"><i class="far fa-sign-in"></i></a>
+        <% end %>
       </div>
 
     </div>
   </nav>
 
   <%# Main-contet %>
-  <%= yield %>
+  <main class="container" style="min-height: 500px;">
+  <p class="notice"><%= notice %></p> 
+    <p class="alert"><%= alert %></p>
+    <p class="notice"><%= notice %></p> 
+    <p class="alert"><%= alert %></p>
+
+    <%= yield %>
+  </main>
+
 
   <%# Footer %>
+  <footer class="container footer d-flex">
+    <p>&copy; 2019 INUstagram</p>
+  </footer>
 </body>
 
 </html>

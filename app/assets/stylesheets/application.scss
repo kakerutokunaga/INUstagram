@@ -12,7 +12,7 @@
  *
  */
 
- 
+
 @import "bootstrap";
 @import "font-awesome";
 
@@ -21,7 +21,7 @@
 //   margin-right: 1rem;
 
 
- 
+
 // }
 .logo-name {
   border-left: 1px solid;
@@ -29,24 +29,40 @@
   padding-left: 1rem;
 }
 
-.container{
+.container {
   max-width: 1000px;
 }
-.navbar{
-  border-bottom: 1px solid rgba(0,0,0,.0975);
+
+.navbar {
+  border-bottom: 1px solid rgba(0, 0, 0, .0975);
 }
-.user-section{
-  a{
+
+.user-section {
+  a {
     padding-left: 15px;
   }
-  i.far{
+
+  i.far {
     font-size: 22px;
     color: #000000d4;
   }
 }
-.search-form{
-  input{
+
+.search-form {
+  input {
     font-size: 13px;
     text-align: center;
+  }
+}
+
+.footer {
+
+  text-align: center;
+  justify-content: center;
+
+  p {
+    color: #999;
+    margin-top: 50px;
+
   }
 }
